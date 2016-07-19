@@ -7,7 +7,8 @@ uint8_t cmd_AT[]={'A','T',0x0D,0x0A};																								//"AT"		"OK"
 uint8_t cmd_AT_CWMODE[] = {'A','T','+','C','W','M','O','D','E','=','3',0x0D,0x0A};	//AT+CWMODE=3
 uint8_t cmd_CIPMUX[]    = {'A','T','+','C','I','P','M','U','X','=','1',0x0D,0x0A};								//AT+CIPMUX=1
 uint8_t cmd_CIPSERVER[] = {'A','T','+','C','I','P','S','E','R','V','E','R','=','1',',','8','0','8','0',0x0D,0x0A};	//AT+CIPSERVER=1,8080
-uint8_t cmd_CIPSEND[]   = {'A','T','+','C','I','P','S','E','N','D','=','0',',','6',0x0D,0x0A}; //AT+CIPSEND=0,6  ?? why the id is 1
+uint8_t cmd_CIPSEND[]   = {'A','T','+','C','I','P','S','E','N','D','=','0',',','6',0x0D,0x0A}; 
+//AT+CIPSEND=0,6  ?? why the id is 1 :the id of the second application link on the same device connected to wifi is supposed to be '1' .I am working on esp8266 these days
 	
 void Delay(__IO u32 nCount)
 {
